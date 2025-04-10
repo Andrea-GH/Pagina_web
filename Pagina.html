@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sneaker Shop</title>
+  <link rel="stylesheet" href="caracteristicas.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Sneaker shop</div>
+      <div class="search-login">
+        <form class="search-form" onsubmit="return buscarProducto()">
+          <input type="text" id="buscar" placeholder="Buscar..." />
+        </form>
+        <script>
+          function buscarProducto() {
+            const query = document.getElementById('buscar').value.toLowerCase();
+        
+            if (query.includes("hombre")) {
+              window.location.href = "hombre.html";
+            } else if (query.includes("mujer")) {
+              window.location.href = "mujeres.html";
+            } else if (query.includes("niño")) {
+              window.location.href = "niños.html";
+            } else if (query.includes("unisex")) {
+              window.location.href = "unisex.html";
+            } else if (query.includes("nuevo")) {
+              window.location.href = "novedades.html";
+            } else {
+              alert("No se encontraron resultados para: " + query);
+            }
+        
+            return false; // Evita que el formulario se recargue
+          }
+        </script>
+        
+
+        <a href="login.html" class="login">INICIAR SESIÓN</a> 
+        <a href="registro.html" class="register">REGISTRARSE</a>
+        <span class="icons">  </span>
+      </div>
+    </nav>
+    <ul class="menu">
+      <li><a href="Pagina.html">Inicio</a></li>
+      <li><a href="hombre.html">Hombre</a></li>
+      <li><a href="mujeres.html">Mujeres</a></li>
+      <li><a href="niños.html">Niños</a></li>
+      <li><a href="unisex.html">Unisex</a></li>
+      <li><a href="novedades.html">Lo más nuevo</a></li>
+    </ul>
+    
+
+  <main>
+    <section class="banner">
+      <div class="banner-container">
+        <img src="banner.jpg" alt="Sneakers Nueva Colección" />
+        <div class="banner-overlay">
+          <h2>Bienvenido a Sneaker Shop</h2>
+          <p>Tu tienda de tenis favorita: Estilo, confort y lo último en moda deportiva.</p>
+        </div>
+      </div>
+    </section>
+    
+
+    <section class="content">
+      <div class="coleccion-box">
+        <h2>¡Descubre nuestra Nueva Colección!</h2>
+      </div>
+      <p>
+        La temporada ha llegado con lo último en innovación y estilo para jugadores de todos los niveles.
+        En nuestra Nueva Colección, encontrarás una selección exclusiva de raquetas, ropa deportiva, calzado
+        y accesorios de tenis, diseñados para ofrecerte lo mejor en rendimiento y confort.
+      </p>
+      <p>
+        Cada producto ha sido elegido cuidadosamente para mantenerte a la vanguardia del tenis,
+        combinando lo último en tecnología con diseños modernos y atractivos. Ya sea que busques mejorar
+        tu juego con raquetas de alto rendimiento o estar a la moda con nuestras nuevas líneas de ropa,
+        tenemos todo lo que necesitas para brillar en la cancha.
+      </p>
+      <p class="highlight">
+        Renueva tu equipo, renueva tu juego. ¡Hazte con lo más nuevo y empieza esta temporada con el pie derecho!
+      </p>
+    </section>
+
+    <section class="products">
+      <div class="product-card">
+        <img src="tennis1.jpg" alt="Hombre LIFESTYLE" />
+        <p class="price">$1500</p>
+        <p>Hombre LIFESTYLE</p>
+        <a href="tennis1.html" class="tennis1">Descripcion</a> 
+
+      </div>
+      <div class="product-card">
+        <img src="tennis2.jpg" alt="Mujeres RUNNING" />
+        <p class="price">$1200</p>
+        <p>Mujeres RUNNING</p>
+        <a href="tennis2.html" class="tennis2">Descripcion</a> 
+
+      </div>
+      <div class="product-card">
+        <img src="tennis3.jpg" alt="Unisex LIFESTYLE" />
+        <p class="price">$900</p>
+        <p>Unisex LIFESTYLE</p>
+        <a href="tennis3.html" class="tennis3">Descripcion</a> 
+
+      </div>
+    </section>
+  </main>
+</body>
+<p align="center">
+  <img src="Diseño.jpg" alt="Diseño" width="200"/>
+</p>
+
+</html>
