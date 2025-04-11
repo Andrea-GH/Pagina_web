@@ -1,0 +1,220 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(to right, #f5b1ec, #fffafc);
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  
+  header {
+  background-color: #d0e6c4;
+  /* background-color: #f391bc; */
+    padding: 2rem 1rem;
+    text-align: center;
+    color: #6c1c3c;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  }
+  
+  header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    font-family: 'Pacifico', cursive;
+  }
+  
+  header p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    color: #944d70;
+  }
+  
+  .section {
+    padding: 3rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .category {
+    background-color: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    padding: 1.8rem 1.2rem;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .category img {
+    max-width: 100%;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+  }
+  
+  .category h2 {
+    color: #d14c86;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .category p {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .btn {
+    background-color: #ff87b0;
+    color: white;
+    padding: 0.8rem 1.4rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #ff5d95;
+  }
+  
+  @media (max-width: 768px) {
+    .section {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  
+  .productos {
+    padding: 3rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .category {
+    background-color: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    padding: 1.8rem 1.2rem;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .category img {
+    max-width: 100%;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+  }
+  
+  .category h2 {
+    color: #d14c86;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .category p {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .btn {
+    background-color: #ff87b0;
+    color: white;
+    padding: 0.8rem 1.4rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #ff5d95;
+  }
+  
+  @media (max-width: 768px) {
+    .section {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .producto {
+    width: 260px;
+    height: 480px; /* Altura fija para igualar todas las tarjetas */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .producto img {
+    max-height: 180px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+  }
+  
+  .producto:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  }
+  
+  .producto h2 {
+    color: #cc2e74;
+    font-size: 1.2rem;
+    margin: 0.5rem 0 0.3rem;
+    text-align: center;
+  }
+  
+  .producto p {
+    font-size: 0.95rem;
+    color: #555;
+    text-align: center;
+    margin: 0.3rem 0;
+  }
+  
+  .boton {
+    background-color: #fc6fb2;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.4rem;
+    border-radius: 25px;
+    font-weight: bold;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .boton:hover {
+    background-color: #e55c9b;
+  }
+
