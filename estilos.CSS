@@ -2,13 +2,13 @@ body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #fefefe;
+  background-color: #f0cceb;
 }
 
 header {
   text-align: center;
   padding: 2rem;
-  background-color: #f9f9f9;
+  background-color: #ecafe2;
   font-family: 'Pacifico', cursive;
 }
 
@@ -22,7 +22,7 @@ header {
 
 .category {
   width: 250px;
-  background-color: #fff;
+  background-color: #efd0fd;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   padding: 1rem;
