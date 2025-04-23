@@ -1,284 +1,52 @@
 body {
-    font-family: 'Quicksand', sans-serif;
-    background: linear-gradient(to right, #f5b1ec, #fffafc);
-    margin: 0;
-    padding: 0;
-    color: #333;
-  }
-  
-  header {
-  background-color: #d0e6c4;
-  /* background-color: #f391bc; */
-    padding: 2rem 1rem;
-    text-align: center;
-    color: #6c1c3c;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  }
-  
-  header h1 {
-    font-size: 2.5rem;
-    margin: 0;
-    font-family: 'Pacifico', cursive;
-  }
-  
-  header p {
-    font-size: 1.2rem;
-    margin-top: 0.5rem;
-    color: #944d70;
-  }
-  
-  .section {
-    padding: 3rem 1rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-  }
-  
-  .category {
-    background-color: #ffffff;
-    border-radius: 24px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-    width: 320px;
-    padding: 1.8rem 1.2rem;
-    text-align: center;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .category:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-  }
-  
-  .category img {
-    max-width: 100%;
-    border-radius: 12px;
-    margin-bottom: 1rem;
-  }
-  
-  .category h2 {
-    color: #d14c86;
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .category p {
-    color: #666;
-    font-size: 1rem;
-    margin-bottom: 1rem;
-  }
-  
-  .btn {
-    background-color: #ff87b0;
-    color: white;
-    padding: 0.8rem 1.4rem;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background 0.3s ease;
-  }
-  
-  .btn:hover {
-    background-color: #ff5d95;
-  }
-  
-  @media (max-width: 768px) {
-    .section {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fefefe;
+}
 
-  
-  .productos {
-    padding: 3rem 1rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-  }
-  
-  .category {
-    background-color: #ffffff;
-    border-radius: 24px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-    width: 320px;
-    padding: 1.8rem 1.2rem;
-    text-align: center;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .category:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-  }
-  
-  .category img {
-    max-width: 100%;
-    border-radius: 12px;
-    margin-bottom: 1rem;
-  }
-  
-  .category h2 {
-    color: #d14c86;
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .category p {
-    color: #666;
-    font-size: 1rem;
-    margin-bottom: 1rem;
-  }
-  
-  .btn {
-    background-color: #ff87b0;
-    color: white;
-    padding: 0.8rem 1.4rem;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background 0.3s ease;
-  }
-  
-  .btn:hover {
-    background-color: #ff5d95;
-  }
-  
-  @media (max-width: 768px) {
-    .section {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
+header {
+  text-align: center;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  font-family: 'Pacifico', cursive;
+}
 
-  .productos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-  }
-  
-  .producto {
-    width: 260px;
-    height: 480px; /* Altura fija para igualar todas las tarjetas */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #fff;
-    border-radius: 20px;
-    padding: 1.5rem;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .producto img {
-    max-height: 180px;
-    object-fit: contain;
-    margin-bottom: 1rem;
-  }
-  
-  .producto:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-  }
-  
-  .producto h2 {
-    color: #cc2e74;
-    font-size: 1.2rem;
-    margin: 0.5rem 0 0.3rem;
-    text-align: center;
-  }
-  
-  .producto p {
-    font-size: 0.95rem;
-    color: #555;
-    text-align: center;
-    margin: 0.3rem 0;
-  }
-  
-  .boton {
-    background-color: #fc6fb2;
-    color: white;
-    border: none;
-    padding: 0.6rem 1.4rem;
-    border-radius: 25px;
-    font-weight: bold;
-    margin-top: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .boton:hover {
-    background-color: #e55c9b;
-  }
+.productos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  justify-content: center;
+}
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tenis para Mujer</title>
-  <link rel="stylesheet" href="estilos.css">
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">-->
+.category {
+  width: 250px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.2s;
+}
 
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+.category:hover {
+  transform: scale(1.05);
+}
 
-</head>
-<body>
+.category img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
 
-  <header>
-    <h1>Sneaker shop 👟</h1>
-    <p>Descubre nuestra colección especial para ti...</p>
-  </header>
-
-  <section class="section">
-    <!-- Tenis para Mujer -->
-    <div class="category">
-      <img src="https://cdn1.coppel.com/images/catalog/pr/8506082-1.jpg" alt="Tenis para Mujer">
-      <h2>Tenis Nike Court Vision Alta para Mujer</h2>
-      <p>Estilo, comodidad y color para cada paso. Encuentra tu par favorito.</p>
-      <a href="#" class="btn">Ver colección</a>
-    </div>
-
-    <section class="productos"> 
-     <!-- Producto 1 -->
-     <div class="category">
-      <img src="https://cdn1.coppel.com/images/catalog/pr/8393142-1.jpg" alt="Tenis para Mujer">
-      <h2>Tenis para Mujer</h2>
-      <p>Plataforma sintética y forro de piel en tono palo de rosa</p>
-      <a href="#" class="btn">Ver colección</a>
-    </div>
-
-    <section class="productos"> 
-      <!-- Producto 2 -->
-      <div class="category">
-       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBQ5FDdBVVatjFVB_iUGmB1n0oExS2L0G57g&s" alt="Tenis para Mujer">
-       <h2>Tenis Casuales para Mujer</h2>
-       <p>Estilo, comodidad y color para cada paso. Encuentra tu par favorito.</p>
-       <a href="#" class="btn">Ver colección</a>
-     </div>
-
-     <section class="productos"> 
-      <!-- Producto 3 -->
-      <div class="category">
-       <img src="https://http2.mlstatic.com/tenis-adidas-neo-mujer-envio-gratis-a-todo-el-pais-zy1-D_NQ_NP_727112-MCO27825901002_072018-F.jpg" alt="Tenis para Mujer">
-       <h2>Tenis para Mujer</h2>
-       <p>Estilo, comodidad y color para cada paso. Encuentra tu par favorito.</p>
-       <a href="#" class="btn">Ver colección</a>
-     </div>
-
-
-     <section class="productos"> 
-      <!-- Producto 4 -->
-      <div class="category">
-       <img src="https://ss550.liverpool.com.mx/xl/1163167511.jpg" alt="Tenis para Mujer">
-       <h2>Tennis Panam Para Mujer</h2>
-       <p>Modelo 010861-0058 corte sintético forro textil suela sintética.</p>
-       <a href="#" class="btn">Ver colección</a>
-     </div>
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #f48fb1;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
