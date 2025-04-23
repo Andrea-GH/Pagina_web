@@ -4,23 +4,87 @@
   <meta charset="UTF-8" />
   <title>UNISEX</title>
   <link rel="stylesheet" href="caracteristicas.css" />
+  <style>
+    /* Fondo de la página */
+    body {
+      background-color: #f4f4f4; /* Color de fondo (puedes cambiar el código hex) */
+      font-family: Arial, sans-serif; /* Fuente para la página */
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Contenedor de los productos */
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 20px;
+    }
+
+    /* Estilo de los productos */
+    .producto {
+      width: 100%;
+      max-width: 300px;
+      margin: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 10px;
+      background-color: #fff; /* Fondo blanco para las tarjetas */
+      border-radius: 8px; /* Bordes redondeados */
+      box-sizing: border-box;
+    }
+
+    /* Imagen de los productos */
+    .producto img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border: 5px solid #ddd; /* Bordes a las imágenes */
+      border-radius: 8px; /* Bordes redondeados para las imágenes */
+      padding: 5px; /* Espaciado entre la imagen y el borde */
+    }
+
+    /* Diseño responsivo */
+    @media (min-width: 600px) {
+      .producto {
+        width: 45%;
+      }
+    }
+
+    @media (min-width: 900px) {
+      .producto {
+        width: 30%;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="content">
-    <h2>Tenis Urbanos Clásicos</h2>
-    <img src="tennis1.jpg"  alt="Tenis Urbanos Clásicos" style="max-width:300px;">
-    <img src="tennis2.jpg"  alt="Tenis Urbanos Clásicos" style="max-width:300px;">
-    <img src="tennis3.jpg"  alt="Tenis Urbanos Clásicos" style="max-width:300px;">
-    <p><strong>Precio:</strong> $1500 MXN</p>
-    <p><strong>Descripción:</strong> Tenis cómodos y versátiles ideales para uso diario. Su diseño clásico los hace perfectos para cualquier ocasión.</p>
-    <p><strong>Tallas disponibles:</strong> 22 - 29</p>
-    <p><strong>Colores:</strong> Blanco, Negro, Azul con gris</p>
-    <a class="register" href="Pagina.html">Volver al inicio</a>
+    <div class="producto">
+      <img src="tennis1.jpg" alt="Tenis Urbanos Clásicos">
+      <h2>Tenis para uso diario</h2>
+      <p><strong>Precio:</strong> $1500 MXN</p>
+      <p><strong>Descripción:</strong> Tenis cómodos y versátiles ideales para uso diario. Su diseño clásico los hace perfectos para cualquier ocasión.</p>
+      <p><strong>Tallas disponibles:</strong> 22 - 29</p>
+      <p><strong>Colores:</strong> Blanco, Negro, Azul con gris</p>
+    </div>
 
-    <p><strong>Precio:</strong> $1200 MXN</p>
-    <p><strong>Tallas disponibles:</strong> 22 - 29</p>
-    <p><strong>Colores:</strong> Blanco, Negro, Azul con gris</p>
-    <a class="register" href="Pagina.html">Volver al inicio</a>
+    <div class="producto">
+      <img src="tennis2.jpg" alt="Tenis Urbanos Clásicos">
+      <h2>Tenis Urbanos Clásicos</h2>
+      <p><strong>Precio:</strong> $1200 MXN</p>
+      <p><strong>Descripción:</strong> Tenis cómodos ideales para uso diario. Su diseño deportivo los hace adecuados para que el pie este comodo.</p>
+      <p><strong>Tallas disponibles:</strong> 22 - 29</p>
+      <p><strong>Colores:</strong> Blanco y Negro, Azul con gris</p>
+    </div>
+
+    <div class="producto">
+      <img src="tennis3.jpg" alt="Tenis Urbanos Clásicos">
+      <h2>Tenis caminata rapida</h2>
+      <p><strong>Precio:</strong> $1200 MXN</p>
+      <p><strong>Descripción:</strong> tenis deportivos adecuados para cualquier actividad fisica</p>
+      <p><strong>Tallas disponibles:</strong> 22 - 29</p>
+      <p><strong>Colores:</strong> Gris con rosa, Blanco con Negro, Azul con gris</p>
+    </div>
   </div>
 </body>
 </html>
