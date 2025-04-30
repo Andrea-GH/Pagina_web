@@ -6,7 +6,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #1e3c72, #2a5298);
+    background: linear-gradient(to right, #5a1e72, rgb(94, 255, 0));
     color: #fff;
     padding: 20px;
 }
@@ -79,4 +79,3 @@ footer {
     font-size: 0.9em;
     color: #ccc;
 }
-
