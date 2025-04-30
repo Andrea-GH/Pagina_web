@@ -5,86 +5,136 @@
   <title>UNISEX</title>
   <link rel="stylesheet" href="caracteristicas.css" />
   <style>
-    /* Fondo de la página */
     body {
-      background-color: #a8d1b8; /* Color de fondo (puedes cambiar el código hex) */
-      font-family: Arial, sans-serif; /* Fuente para la página */
+      background-color: #f5f5f5;
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
     }
 
-    /* Contenedor de los productos */
     .content {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-around;
-      padding: 20px;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
-    /* Estilo de los productos */
     .producto {
-      width: 100%;
+      flex: 1 1 calc(33.333% - 40px); /* 3 por fila con espacio */
       max-width: 300px;
-      margin: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      padding: 10px;
-      background-color: #a8d1b8; /* Fondo blanco para las tarjetas */
-      border-radius: 8px; /* Bordes redondeados */
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 15px;
       box-sizing: border-box;
+      text-align: center;
+      transition: transform 0.2s ease;
     }
 
-    /* Imagen de los productos */
+    .producto:hover {
+      transform: scale(1.03);
+    }
+
     .producto img {
       width: 100%;
       height: auto;
-      display: block;
-      border: 5px solid #ddd; /* Bordes a las imágenes */
-      border-radius: 8px; /* Bordes redondeados para las imágenes */
-      padding: 5px; /* Espaciado entre la imagen y el borde */
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      margin-bottom: 10px;
     }
 
-    /* Diseño responsivo */
-    @media (min-width: 600px) {
+    h2 {
+      font-size: 18px;
+      margin: 10px 0;
+    }
+
+    p {
+      font-size: 14px;
+      margin: 4px 0;
+    }
+
+    .ver-mas {
+      display: inline-block;
+      margin-top: 10px;
+      color: #007BFF;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .ver-mas:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
       .producto {
-        width: 45%;
+        flex: 1 1 45%;
       }
     }
 
-    @media (min-width: 900px) {
+    @media (max-width: 600px) {
       .producto {
-        width: 30%;
+        flex: 1 1 100%;
       }
     }
   </style>
 </head>
 <body>
+
   <div class="content">
     <div class="producto">
-      <img src="tennis1.jpg" alt="Tenis Urbanos Clásicos">
-      <h2>Tenis para uso diario</h2>
-      <p><strong>Precio:</strong> $1500 MXN</p>
-      <p><strong>Descripción:</strong> Tenis cómodos y versátiles ideales para uso diario. Su diseño clásico los hace perfectos para cualquier ocasión.</p>
-      <p><strong>Tallas disponibles:</strong> 22 - 29</p>
-      <p><strong>Colores:</strong> Blanco, Negro, Azul con gris</p>
+      <img src="TU1.jpg" alt="2002RX Gore-Tex x JJJJound">
+      <h2>2002RX Gore-Tex x JJJJound</h2>
+      <p><strong>Precio:</strong> $4,099.00 MXN</p>
+      <a href="producto1.html" class="ver-mas">Ver más</a>
     </div>
 
     <div class="producto">
-      <img src="tennis2.jpg" alt="Tenis Urbanos Clásicos">
-      <h2>Tenis Urbanos Clásicos</h2>
-      <p><strong>Precio:</strong> $1200 MXN</p>
-      <p><strong>Descripción:</strong> Tenis cómodos ideales para uso diario. Su diseño deportivo los hace adecuados para que el pie este comodo.</p>
-      <p><strong>Tallas disponibles:</strong> 22 - 29</p>
-      <p><strong>Colores:</strong> Blanco y Negro, Azul con gris</p>
+      <img src="TU2.jpg" alt="Tenis Asics EX89 Unisex">
+      <h2>Tenis Asics EX89 Unisex</h2>
+      <p><strong>Precio:</strong> $4,099.00 MXN</p>
+      <a href="producto2.html" class="ver-mas">Ver más</a>
     </div>
 
     <div class="producto">
-      <img src="tennis3.jpg" alt="Tenis Urbanos Clásicos">
-      <h2>Tenis caminata rapida</h2>
-      <p><strong>Precio:</strong> $1200 MXN</p>
-      <p><strong>Descripción:</strong> tenis deportivos adecuados para cualquier actividad fisica</p>
-      <p><strong>Tallas disponibles:</strong> 22 - 29</p>
-      <p><strong>Colores:</strong> Gris con rosa, Blanco con Negro, Azul con gris</p>
+      <img src="TU3.jpg" alt="ONITSUKA TIGER - ULTIMATE 81 EX">
+      <h2>ONITSUKA TIGER - ULTIMATE 81 EX</h2>
+      <p><strong>Precio:</strong> $4,099.00 MXN</p>
+      <a href="producto3.html" class="ver-mas">Ver más</a>
+    </div>
+
+    <div class="producto">
+      <img src="TU4.jpg" alt="Modelo 4">
+      <h2>Modelo 4</h2>
+      <p><strong>Precio:</strong> $4,099.00 MXN</p>
+      <a href="producto4.html" class="ver-mas">Ver más</a>
+    </div>
+
+    <div class="producto">
+      <img src="TU5.jpg" alt="Modelo 5">
+      <h2>Modelo 5</h2>
+      <p><strong>Precio:</strong> $4,099.00 MXN</p>
+      <a href="producto5.html" class="ver-mas">Ver más</a>
+    </div>
+
+    <div class="producto">
+      <img src="TU6.jpg" alt="Modelo 6">
+      <h2>Modelo 6</h2>
+      <p><strong>Precio:</strong> $4,099.00 MXN</p>
+      <a href="producto6.html" class="ver-mas">Ver más</a>
     </div>
   </div>
+
 </body>
 </html>
+
+
+</body>
+</html>
+
+</body>
+</html>
+
