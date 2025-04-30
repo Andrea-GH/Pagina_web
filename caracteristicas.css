@@ -74,18 +74,18 @@ body {
   cursor: pointer;
 }
 
-.banner img {
-  width: 100%;
-  height: auto;
-  max-height: 500px;
-  object-fit: cover;
-  display: block;
-  margin: 0 auto;
-}
 .banner-container {
   position: relative;
   width: 100%;
   overflow: hidden;
+}
+
+.banner-container img {
+  width: 100%;
+  max-height: 500px;
+  height: auto;
+  object-fit: cover;
+  display: block;
 }
 
 .banner-container img {
@@ -99,7 +99,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* fondo oscuro con transparencia */
+  background-color: rgba(0, 0, 0, 0.5); 
   color: white;
   display: flex;
   flex-direction: column;
@@ -182,13 +182,13 @@ body {
 }
 
 .coleccion-box {
-  background-color: #ff4d4d;
+  background-color: hsl(231, 98%, 58%);
   padding: 20px 40px;
   border-radius: 12px;
   margin-bottom: 20px;
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: center;  
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   width: 107%; /* o 95%, según lo que necesites */
   margin: 0 auto 50px auto; /* para centrarlo si no es 100% */
@@ -201,4 +201,18 @@ body {
   font-size: 1.8rem;
   font-weight: bold;
   margin: 0;
+}
+
+@media screen and (min-width: 1200px) {
+  .banner-container {
+    height: 100vh;
+  }
+
+  .banner-container img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    max-height: none;
+  }
 }
