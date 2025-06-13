@@ -8,8 +8,8 @@
 /* Estilo para el body */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: hsl(276, 83%, 51%);
+    color: hsl(73, 87%, 64%);
     line-height: 1.6;
     padding: 20px;
 }
@@ -22,12 +22,12 @@ header {
 
 header h1 {
     font-size: 2.5rem;
-    color: #333;
+    color: #0e0d0d;
 }
 
 header p {
     font-size: 1.1rem;
-    color: #777;
+    color: hsl(0, 100%, 98%);
 }
 
 /* Estilos para la sección de productos */
@@ -40,8 +40,8 @@ header p {
 
 /* Estilos para cada producto */
 .producto {
-    background-color: #fff;
-    border-radius: 10px;
+    background-color: lab(99.93% -0.32 -0.13);
+    border-radius: 50px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     width: 30%;
@@ -56,14 +56,14 @@ header p {
 .producto img {
     width: 100%;
     height: auto;
-    border-bottom: 2px solid #eee;
+    border-bottom: 2px solid hwb(0 98% 2%);
 }
 
 .descripcion {
     padding: 15px;
     font-size: 1rem;
-    color: #555;
-    background-color: #f9f9f9;
+    color: hsl(0, 0%, 0%);
+    background-color: hsl(41, 100%, 52%);
     text-align: justify;
 }
 
