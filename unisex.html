@@ -2,138 +2,315 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>UNISEX</title>
-  <link rel="stylesheet" href="caracteristicas.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UNISEX - Sneaker Shop</title>
   <style>
+    :root {
+      --primary-color: #000;
+      --secondary-color: #767677;
+      --price-color: #000;
+      --free-shipping-color: #00a650;
+      --border-color: #e5e5e5;
+      --background-color: #e8f5e9; /* Gris verdoso claro */
+    }
+    
     body {
-      background-color: #f5f5f5;
-      font-family: Arial, sans-serif;
+      background-color: var(--background-color);
+      font-family: 'AdihausDIN', Arial, sans-serif;
       margin: 0;
       padding: 0;
+      color: var(--primary-color);
+    }
+
+    .back-button {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: var(--primary-color);
+      color: white;
+      text-decoration: none;
+      border-radius: 50px;
+      text-align: center;
+      width: 150px;
+      font-weight: bold;
+      transition: all 0.3s;
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+
+    .back-button:hover {
+      background-color: #333;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
 
     .content {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
       padding: 40px 20px;
       max-width: 1200px;
       margin: 0 auto;
     }
 
     .producto {
-      flex: 1 1 calc(33.333% - 40px); /* 3 por fila con espacio */
-      max-width: 300px;
       background-color: #ffffff;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      padding: 15px;
-      box-sizing: border-box;
-      text-align: center;
-      transition: transform 0.2s ease;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      position: relative;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      border: 1px solid #e0e0e0;
     }
 
     .producto:hover {
-      transform: scale(1.03);
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
     }
 
-    .producto img {
+    /* Contenedor de imagen */
+    .img-container {
       width: 100%;
-      height: auto;
-      border-radius: 10px;
-      border: 1px solid #ddd;
-      margin-bottom: 10px;
+      height: 250px;
+      position: relative;
+      overflow: hidden;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-grow: 1;
+      border-bottom: 1px solid #f0f0f0;
     }
 
-    h2 {
-      font-size: 18px;
-      margin: 10px 0;
+    .producto-img {
+      max-width: 80%;
+      max-height: 80%;
+      object-fit: contain;
+      transition: transform 0.3s ease;
     }
 
-    p {
-      font-size: 14px;
-      margin: 4px 0;
+    .producto:hover .producto-img {
+      transform: scale(1.05);
     }
 
-    .ver-mas {
-      display: inline-block;
-      margin-top: 10px;
-      color: #007BFF;
-      text-decoration: none;
+    /* Contenedor de miniaturas */
+    .thumbnail-container {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      padding: 10px;
+      background: #f9f9f9;
+    }
+
+    .thumbnail {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      border: 1px solid #e0e0e0;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .thumbnail:hover {
+      border-color: #000;
+      transform: scale(1.05);
+    }
+
+    /* Badge Nuevo */
+    .badge-new {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #fff;
+      color: var(--primary-color);
+      padding: 3px 8px;
+      font-size: 10px;
       font-weight: bold;
+      border-radius: 2px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      text-transform: uppercase;
+      border: 1px solid #e0e0e0;
     }
 
-    .ver-mas:hover {
-      text-decoration: underline;
+    /* Contenido del producto */
+    .producto-content {
+      padding: 20px;
+      text-align: center;
+      background: #ffffff;
+    }
+
+    .producto-title {
+      font-size: 16px;
+      font-weight: bold;
+      margin: 0 0 8px;
+      line-height: 1.3;
+    }
+
+    .producto-subtitle {
+      font-size: 14px;
+      color: var(--secondary-color);
+      margin: 0 0 12px;
+      font-weight: normal;
+    }
+
+    .producto-category {
+      font-size: 12px;
+      color: var(--secondary-color);
+      margin: 0 0 8px;
+      text-transform: uppercase;
+    }
+
+    .producto-colors {
+      font-size: 12px;
+      color: var(--secondary-color);
+      margin: 0 0 12px;
+    }
+
+    .producto-price {
+      font-size: 16px;
+      font-weight: bold;
+      margin: 12px 0;
+      color: var(--price-color);
+    }
+
+    .free-shipping {
+      color: var(--free-shipping-color);
+      font-size: 12px;
+      font-weight: bold;
+      margin: 8px 0 0;
     }
 
     /* Responsive */
-    @media (max-width: 900px) {
-      .producto {
-        flex: 1 1 45%;
+    @media (max-width: 768px) {
+      .content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 20px 15px;
       }
-    }
-
-    @media (max-width: 600px) {
-      .producto {
-        flex: 1 1 100%;
+      
+      .img-container {
+        height: 220px;
+      }
+      
+      .producto-content {
+        padding: 15px;
+      }
+      
+      .thumbnail {
+        width: 40px;
+        height: 40px;
       }
     }
   </style>
 </head>
 <body>
 
+  <a href="Pagina.html" class="back-button">← Regresar</a>
+
   <div class="content">
+    <!-- Producto 1 -->
     <div class="producto">
-      <img src="TU1.jpg" alt="2002RX Gore-Tex x JJJJound">
-      <h2>2002RX Gore-Tex x JJJJound</h2>
-      <p><strong>Precio:</strong> $4,099.00 MXN</p>
-      <a href="producto1.html" class="ver-mas">Ver más</a>
+      <div class="img-container">
+        <img src="TUNP1.png" alt="Tenis Break Start" class="producto-img" id="main-img-1">
+        <div class="badge-new">Nuevo</div>
+      </div>
+      <div class="thumbnail-container">
+        <img src="TUNP1.png" alt="Color 1" class="thumbnail" onmouseover="document.getElementById('main-img-1').src='TUNP1.png'">
+        <img src="TUNP2.png" alt="Color 2" class="thumbnail" onmouseover="document.getElementById('main-img-1').src='TUNP2.png'">
+      </div>
+      <div class="producto-content">
+        <div class="producto-price">$1,249</div>
+        <h3 class="producto-title">Tenis Break Start</h3>
+        <p class="producto-category">Sportwear</p>
+        <p class="producto-colors">2 colores</p>
+        <p class="free-shipping">Envío gratis</p>
+      </div>
     </div>
 
+    <!-- Producto 2 -->
     <div class="producto">
-      <img src="TU2.jpg" alt="Tenis Asics EX89 Unisex">
-      <h2>Tenis Asics EX89 Unisex</h2>
-      <p><strong>Precio:</strong> $4,099.00 MXN</p>
-      <a href="producto2.html" class="ver-mas">Ver más</a>
+      <div class="img-container">
+        <img src="TUNP3.png" alt="Tenis Ultimashow 2.0" class="producto-img" id="main-img-2">
+        <div class="badge-new">Nuevo</div>
+      </div>
+      <div class="thumbnail-container">
+        <img src="TUNP3.png" alt="Color 1" class="thumbnail" onmouseover="document.getElementById('main-img-2').src='TUNP3.png'">
+        <img src="TUNP4.png" alt="Color 2" class="thumbnail" onmouseover="document.getElementById('main-img-2').src='TUNP4.png'">
+      </div>
+      <div class="producto-content">
+        <div class="producto-price">$1,249</div>
+        <h3 class="producto-title">Tenis Ultimashow 2.0 Mercedes</h3>
+        <p class="producto-category">Deportes</p>
+        <p class="producto-colors">2 colores</p>
+        <p class="free-shipping">Envío gratis</p>
+      </div>
     </div>
 
+    <!-- Producto 3 -->
     <div class="producto">
-      <img src="TU3.jpg" alt="ONITSUKA TIGER - ULTIMATE 81 EX">
-      <h2>ONITSUKA TIGER - ULTIMATE 81 EX</h2>
-      <p><strong>Precio:</strong> $4,099.00 MXN</p>
-      <a href="producto3.html" class="ver-mas">Ver más</a>
+      <div class="img-container">
+        <img src="TUNP5.png" alt="UA Phantom 4 Luxe" class="producto-img" id="main-img-3">
+      </div>
+      <div class="thumbnail-container">
+        <img src="TUNP5.png" alt="Color 1" class="thumbnail" onmouseover="document.getElementById('main-img-3').src='TUNP5.png'">
+        <img src="TUNP6.png" alt="Color 2" class="thumbnail" onmouseover="document.getElementById('main-img-3').src='TUNP6.png'">
+      </div>
+      <div class="producto-content">
+        <div class="producto-price">$2,399</div>
+        <h3 class="producto-title">UA Phantom 4 Luxe</h3>
+        <p class="producto-category">Originals</p>
+        <p class="producto-colors">2 colores</p>
+        <p class="free-shipping">Envío gratis</p>
+      </div>
     </div>
 
+    <!-- Producto 4 -->
     <div class="producto">
-      <img src="TU4.jpg" alt="Modelo 4">
-      <h2>Modelo 4</h2>
-      <p><strong>Precio:</strong> $4,099.00 MXN</p>
-      <a href="producto4.html" class="ver-mas">Ver más</a>
+      <div class="img-container">
+        <img src="TUNP7.png" alt="UA Apparition" class="producto-img" id="main-img-4">
+      </div>
+      <div class="thumbnail-container">
+        <img src="TUNP7.png" alt="Color 1" class="thumbnail" onmouseover="document.getElementById('main-img-4').src='TUNP7.png'">
+        <img src="TUNP8.png" alt="Color 2" class="thumbnail" onmouseover="document.getElementById('main-img-4').src='TUNP8.png'">
+      </div>
+      <div class="producto-content">
+        <div class="producto-price">$2,159</div>
+        <h3 class="producto-title">UA Apparition</h3>
+        <p class="producto-category">Tenis unisex</p>
+        <p class="producto-colors">2 colores</p>
+        <p class="free-shipping">Envío gratis</p>
+      </div>
     </div>
 
+    <!-- Producto 5 -->
     <div class="producto">
-      <img src="TU5.jpg" alt="Modelo 5">
-      <h2>Modelo 5</h2>
-      <p><strong>Precio:</strong> $4,099.00 MXN</p>
-      <a href="producto5.html" class="ver-mas">Ver más</a>
+      <div class="img-container">
+        <img src="TUNP9.png" alt="2002RX gore-Tex" class="producto-img" id="main-img-5">
+      </div>
+      <div class="producto-content">
+        <div class="producto-price">$4,099</div>
+        <h3 class="producto-title">2002RX gore-Tex x JJJJound</h3>
+        <p class="producto-category">Unisex Lifestyle</p>
+        <p class="free-shipping">Envío gratis</p>
+      </div>
     </div>
 
+    <!-- Producto 6 -->
     <div class="producto">
-      <img src="TU6.jpg" alt="Modelo 6">
-      <h2>Modelo 6</h2>
-      <p><strong>Precio:</strong> $4,099.00 MXN</p>
-      <a href="producto6.html" class="ver-mas">Ver más</a>
+      <div class="img-container">
+        <img src="TUNP10.png" alt="574" class="producto-img" id="main-img-6">
+      </div>
+      <div class="producto-content">
+        <div class="producto-price">$2,299</div>
+        <h3 class="producto-title">574</h3>
+        <p class="producto-category">Unisex Lifestyle</p>
+        <p class="free-shipping">Envío gratis</p>
+      </div>
     </div>
   </div>
-
-</body>
-</html>
-
-
-</body>
-</html>
 
 </body>
 </html>
