@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UA Phantom 4 Luxe - UNISEX</title>
+  <style>
+    :root {
+      --primary-color: #000;
+      --secondary-color: #767677;
+      --background-color: #f5f5f5;
+      --discount-color: #d32f2f;
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--background-color);
+      color: var(--primary-color);
+      position: relative;
+      min-height: 100vh;
+      padding-bottom: 80px;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+    
+    .product-images {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .main-image {
+      width: 100%;
+      height: 500px;
+      object-fit: contain;
+      background: white;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    
+    .thumbnails {
+      display: flex;
+      gap: 10px;
+    }
+    
+    .thumbnail {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border: 1px solid #e0e0e0;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    
+    .thumbnail:hover {
+      transform: scale(1.05);
+      border-color: var(--primary-color);
+    }
+    
+    .product-info {
+      padding: 20px;
+    }
+    
+    h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    
+    .product-category {
+      font-size: 16px;
+      color: var(--secondary-color);
+      margin-bottom: 20px;
+    }
+    
+    .price-container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+    
+    .current-price {
+      font-size: 24px;
+      font-weight: bold;
+      color: var(--discount-color);
+    }
+    
+    .original-price {
+      font-size: 16px;
+      text-decoration: line-through;
+      color: var(--secondary-color);
+      margin-left: 10px;
+    }
+    
+    .promo-badge {
+      background-color: #fff8e1;
+      padding: 8px 12px;
+      border-radius: 4px;
+      font-size: 14px;
+      margin-bottom: 20px;
+      display: inline-block;
+    }
+    
+    .promo-badge a {
+      color: var(--discount-color);
+      text-decoration: none;
+    }
+    
+    .divider {
+      border-top: 1px solid #eee;
+      margin: 20px 0;
+    }
+    
+    .color-option {
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    
+    .size-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    
+    .size-table td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: center;
+      font-size: 14px;
+    }
+    
+    .quantity-selector {
+      display: flex;
+      align-items: center;
+      margin-bottom: 25px;
+    }
+    
+    .quantity-selector input {
+      width: 60px;
+      padding: 10px;
+      text-align: center;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      margin-right: 15px;
+    }
+    
+    .add-to-cart {
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 50px;
+      cursor: pointer;
+      width: 100%;
+      margin-bottom: 25px;
+      text-transform: uppercase;
+      transition: background-color 0.3s;
+    }
+    
+    .add-to-cart:hover {
+      background-color: #333;
+    }
+    
+    .view-photos {
+      color: #0066cc;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 10px;
+    }
+    
+    .back-button {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: var(--primary-color);
+      color: white;
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 50px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      z-index: 100;
+    }
+    
+    .back-button:hover {
+      background-color: #333;
+    }
+    
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+        padding: 15px;
+      }
+      
+      .main-image {
+        height: 350px;
+      }
+      
+      .back-button {
+        width: 90%;
+        justify-content: center;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 24px;
+      }
+      
+      .size-table td {
+        padding: 8px;
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="product-images">
+      <img src="TUNP5.png" alt="UA Phantom 4 Luxe" class="main-image" id="mainProductImage">
+      <div class="thumbnails">
+        <img src="TUNP5.png" alt="Vista frontal" class="thumbnail" onclick="document.getElementById('mainProductImage').src='phantom-thumb1.jpg'">
+        <img src="TUNP5-.png" alt="Vista lateral" class="thumbnail" onclick="document.getElementById('mainProductImage').src='phantom-thumb2.jpg'">
+       </div>
+    </div>
+    
+    <div class="product-info">
+      <h1>UA PHANTOM 4 LUXE</h1>
+      <div class="product-category">Tenis unisex</div>
+      
+      <div class="price-container">
+        <span class="current-price">$2,399.20</span>
+        <span class="original-price">$2,999.66</span>
+      </div>
+      
+      <div class="promo-badge">
+        <a href="#">Improvida de Documentos + 15% off desde $2,999</a>
+      </div>
+      
+      <div class="divider"></div>
+      
+      <div class="color-option">White / White Quartz - 102</div>
+      
+      <div class="divider"></div>
+      
+      <h2>Tabla de tallas</h2>
+      <table class="size-table">
+        <tr>
+          <td>MX 12 - MX M 2.5</td>
+          <td>MX 12.5 - MX M 3</td>
+          <td>MX 13 - MX M 3.5</td>
+        </tr>
+        <tr>
+          <td>MX 13.5 - MX M 4</td>
+          <td>MX 14.1 - MX M 4.5</td>
+          <td>MX 14.5 - MX M 5</td>
+        </tr>
+        <tr>
+          <td>MX 15 - MX M 5.5</td>
+          <td>MX 16.5 - MX M 6</td>
+          <td>MX 16 - MX M 6.5</td>
+        </tr>
+        <tr>
+          <td>MX 18.5 - MX M 7</td>
+          <td>MX 17 - MX M 7.5</td>
+          <td>MX 17.5 - MX M 8</td>
+        </tr>
+        <tr>
+          <td>MX 18 - MX M 8.5</td>
+          <td>MX 18.5 - MX M 9</td>
+          <td>MX 19 - MX M 9.5</td>
+        </tr>
+        <tr>
+          <td>MX 19.5 - MX M 10</td>
+          <td>MX 11.0 - MX M 10.5</td>
+          <td></td>
+        </tr>
+      </table>
+      
+      <div class="divider"></div>
+      
+      <div class="quantity-selector">
+        <input type="number" value="1" min="1">
+      </div>
+      
+      <button class="add-to-cart">Agregar al carrito</button>
+      
+   
+    </div>
+  </div>
+
+  <!-- Botón de volver -->
+  <a href="unisex.html" class="back-button">
+    ← Volver a Unisex
+  </a>
+</body>
+</html>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UA Apparition - UNISEX</title>
+  <style>
+    :root {
+      --primary-color: #000;
+      --secondary-color: #767677;
+      --background-color: #e8f5e9;
+      --discount-color: #d32f2f;
+    }
+    
+    body {
+      font-family: 'AdihausDIN', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--background-color);
+      color: var(--primary-color);
+      position: relative;
+      min-height: 100vh;
+      padding-bottom: 80px;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+    
+    .product-images {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .main-image {
+      width: 100%;
+      height: 500px;
+      object-fit: contain;
+      background: white;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    
+    .thumbnails {
+      display: flex;
+      gap: 10px;
+    }
+    
+    .thumbnail {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border: 1px solid #e0e0e0;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    
+    .thumbnail:hover {
+      transform: scale(1.05);
+      border-color: var(--primary-color);
+    }
+    
+    .product-info {
+      padding: 20px;
+    }
+    
+    h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+    
+    h2 {
+      font-size: 20px;
+      color: var(--secondary-color);
+      margin-top: 0;
+      margin-bottom: 30px;
+      font-weight: normal;
+    }
+    
+    .price-container {
+      display: flex;
+      align-items: center;
+      margin: 20px 0;
+    }
+    
+    .current-price {
+      font-size: 24px;
+      font-weight: bold;
+      color: var(--discount-color);
+    }
+    
+    .original-price {
+      font-size: 18px;
+      text-decoration: line-through;
+      color: var(--secondary-color);
+      margin-left: 10px;
+    }
+    
+    .promo-banner {
+      background-color: #fff8e1;
+      padding: 10px;
+      border-left: 4px solid #ffc107;
+      margin-bottom: 25px;
+      font-size: 14px;
+    }
+    
+    .description {
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+    
+    .details-section {
+      margin-bottom: 30px;
+    }
+    
+    .details-section h3 {
+      margin-bottom: 10px;
+    }
+    
+    .colors {
+      margin-bottom: 20px;
+    }
+    
+    .sizes {
+      margin-bottom: 30px;
+    }
+    
+    .size-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+    
+    .size-table td {
+      border: 1px solid #e0e0e0;
+      padding: 10px;
+      text-align: center;
+      transition: all 0.2s;
+    }
+    
+    .size-table td:hover {
+      border-color: var(--primary-color);
+      background-color: #f5f5f5;
+    }
+    
+    .add-to-cart {
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 50px;
+      cursor: pointer;
+      width: 100%;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      transition: background-color 0.3s;
+    }
+    
+    .add-to-cart:hover {
+      background-color: #333;
+    }
+    
+    .delivery-info {
+      font-size: 14px;
+      margin-bottom: 20px;
+      color: var(--secondary-color);
+    }
+    
+    .whatsapp-info {
+      font-size: 14px;
+      color: var(--secondary-color);
+    }
+    
+    /* Botón de volver */
+    .back-button {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: var(--primary-color);
+      color: white;
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 50px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      z-index: 100;
+      transition: background-color 0.3s;
+    }
+    
+    .back-button:hover {
+      background-color: #333;
+    }
+    
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+        padding: 15px;
+        gap: 30px;
+      }
+      
+      .main-image {
+        height: 350px;
+      }
+      
+      .back-button {
+        width: 90%;
+        justify-content: center;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 24px;
+      }
+      
+      h2 {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="product-images">
+      <img src="TUNP7.png" alt="UA Apparition" class="main-image" id="mainProductImage">
+      <div class="thumbnails">
+        <img src="TUNP7.png" alt="Vista frontal" class="thumbnail" onclick="document.getElementById('mainProductImage').src='TUNP7.png'">
+        <img src="TUNP7-.png" alt="Vista lateral" class="thumbnail" onclick="document.getElementById('mainProductImage').src='TUNP7-.png'">
+      <img src="TUNP8.png" alt="Vista frontal" class="thumbnail" onclick="document.getElementById('mainProductImage').src='TUNP7.png'">
+        <img src="TUNP8-.png" alt="Vista lateral" class="thumbnail" onclick="document.getElementById('mainProductImage').src='TUNP7-.png'">
+      
+      </div>
+    </div>
+    
+    <div class="product-info">
+      <h1>UA APPARITION</h1>
+      <h2>TENIS UNISEX DE ESTILO RETRO CON TECNOLOGÍA MODERNA</h2>
+      
+      <div class="price-container">
+        <span class="current-price">$2,150.20</span>
+        <span class="original-price">$92,000.00</span>
+      </div>
+      
+      <div class="promo-banner">
+        Temporada de Descuentos • 15% off desde $2,090
+      </div>
+      
+      <div class="description">
+        <p>Hemos recuperado unas de las primeras zapatillas de UA, que se lanzaron en el 2009. Este modelo retro está repleto de detalles auténticos de los tenis de running, pero se han actualizado con nuevas colores y la suave amortiguación UAHOVR™ para ofrecer comodidad durante todo el día.</p>
+      </div>
+      
+      <div class="details-section">
+        <h3>Detalles</h3>
+        <p>IDEALES PARA USO DIARIO Y ESTILO URBANO</p>
+      </div>
+      
+      <div class="colors">
+        <h3>Colores</h3>
+        <p>White / Metallic Silver - 111</p>
+      </div>
+      
+      <div class="sizes">
+        <h3>Tallas</h3>
+        <table class="size-table">
+          <tr>
+            <td>MXH2 - MXM 2.5</td>
+            <td>MXH3 - MXM 3.5</td>
+            <td>MXH3.5 - MXM 4</td>
+          </tr>
+          <tr>
+            <td>MXH4.5 - MXM 5</td>
+            <td>MXH5 - MXM 5.5</td>
+            <td>MXH5.5 - MXM 6</td>
+          </tr>
+          <tr>
+            <td>MXH8 - MXM 8.5</td>
+            <td>MXH8.5 - MXM 7</td>
+            <td>MXH7 - MXM 7.5</td>
+          </tr>
+          <tr>
+            <td>MXH7.5 - MXM 8</td>
+            <td>MXH8 - MXM 8.5</td>
+            <td>MXH8.5 - MXM 9</td>
+          </tr>
+          <tr>
+            <td>MXH9 - MXM 9.5</td>
+            <td>MXH9.5 - MXM 10</td>
+            <td>MXH10 - MXM 10.5</td>
+          </tr>
+        </table>
+      </div>
+      
+      <button class="add-to-cart">AÑADIR AL CARRITO</button>
+      
+      <p class="delivery-info">Obtener fechas de entrega</p>
+      <p class="whatsapp-info">AHORA PUEDES COMUNICARTE CON NOSOTROS A TRAVÉS DE WHATSAPP</p>
+    </div>
+  </div>
+
+  <!-- Botón de volver -->
+  <a href="unisex.html" class="back-button">
+    ← Volver a Unisex
+  </a>
+</body>
+</html>

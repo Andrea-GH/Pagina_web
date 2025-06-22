@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MASTA - Calzado Deportivo</title>
+    <style>
+        :root {
+            --primary-color: #000000;
+            --secondary-color: #767677;
+            --accent-color: #00a650;
+            --background-color: #f8f8f8;
+            --card-bg: #ffffff;
+            --border-color: #e5e5e5;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+        
+        body {
+            background-color: var(--background-color);
+            color: var(--primary-color);
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            position: relative;
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 20px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+        
+        .header-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            display: block;
+            background-color: var(--primary-color);
+        }
+        
+        .header-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .search-bar {
+            display: flex;
+            margin: 10px auto;
+            max-width: 1200px;
+            padding: 0 20px;
+        }
+        
+        .search-bar input {
+            flex-grow: 1;
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px 0 0 4px;
+        }
+        
+        .search-bar button {
+            padding: 10px 15px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+        
+        .promo-banner {
+            background-color: var(--accent-color);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        
+        .shipping-banner {
+            display: flex;
+            justify-content: space-around;
+            background-color: white;
+            padding: 15px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .shipping-item {
+            text-align: center;
+            font-size: 14px;
+            color: var(--secondary-color);
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        
+        .product-card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .product-info {
+            padding: 15px;
+        }
+        
+        .product-price {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        
+        .product-name {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        
+        .product-category {
+            font-size: 14px;
+            color: var(--secondary-color);
+            margin-bottom: 8px;
+        }
+        
+        .product-colors {
+            font-size: 12px;
+            color: var(--secondary-color);
+            margin-bottom: 12px;
+        }
+        
+        .free-shipping {
+            color: var(--accent-color);
+            font-size: 12px;
+            font-weight: bold;
+        }
+        
+        .new-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: white;
+            color: var(--primary-color);
+            padding: 3px 8px;
+            font-size: 10px;
+            font-weight: bold;
+            border-radius: 2px;
+            text-transform: uppercase;
+        }
+        
+        .product-image-container {
+            position: relative;
+        }
+        
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+            font-size: 14px;
+            position: relative;
+        }
+        
+        .footer-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            display: block;
+            background-color: var(--primary-color);
+        }
+        
+        .footer-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 18px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            width: 100%;
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+            }
+            
+            nav ul {
+                margin-top: 15px;
+            }
+            
+            .shipping-banner {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+            
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header-text {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+
+        <div style="position: relative;">
+                  <div class="logo">SNEAKER SHOP</div>
+      <nav>
+        <ul>
+          <li><a href="Pagina.html">INICIO</a></li>
+          <li><a href="hombre.html">HOMBRE</a></li>
+          <li><a href="mujeres.html">MUJER</a></li>
+          <li><a href="niños.html">NIÑOS</a></li>
+        </ul>
+      </nav>
+    </div>
+            <img src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80" alt="Tenis deportivos" class="header-image">
+            
+            <div class="header-text">SNEAKER SHOP<br>Tenis para Hombres</div>
+        </div>
+    </header>
+    
+    <div class="search-bar">
+        <input type="text" placeholder="Buscar">
+        <button>Buscar</button>
+    </div>
+    
+
+    
+    <div class="product-grid">
+        <!-- Producto 1 -->
+        <div class="product-card">
+            <div class="product-image-container">
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Tenis Response Runner" class="product-image">
+                <div class="new-badge">Nuevo</div>
+            </div>
+            <div class="product-info">
+                <div class="product-price">$1,299</div>
+                <div class="product-name">Tenis Response Runner</div>
+                <div class="product-category">Running</div>
+                <div class="product-colors">13 colores</div>
+                <div class="free-shipping">Envío gratis</div>
+            </div>
+        </div>
+        
+        <!-- Producto 2 -->
+        <div class="product-card">
+            <div class="product-image-container">
+                <img src="https://images.unsplash.com/photo-1600269452121-4f2416e55c28?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Tenis Break Start" class="product-image">
+            </div>
+            <div class="product-info">
+                <div class="product-price">$1,249</div>
+                <div class="product-name">Tenis Break Start</div>
+                <div class="product-category">Sportswear</div>
+                <div class="product-colors">9 colores</div>
+                <div class="free-shipping">Envío gratis</div>
+            </div>
+        </div>
+        
+        <!-- Producto 3 -->
+        <div class="product-card">
+            <div class="product-image-container">
+                <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Zapatillas Adizero BK" class="product-image">
+            </div>
+            <div class="product-info">
+                <div class="product-price">$1,999</div>
+                <div class="product-name">Zapatillas Adizero BK</div>
+                <div class="product-category">Running</div>
+                <div class="product-colors">3 colores</div>
+                <div class="free-shipping">Envío gratis</div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div style="position: relative;">
+            <img src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80" alt="Tenis deportivos" class="footer-image">
+            <div class="footer-text">© 2023 Sneaker Shop. Todos los derechos reservados.</div>
+        </div>
+    </footer>
+</body>
+</html>

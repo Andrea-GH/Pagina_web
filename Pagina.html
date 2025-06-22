@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sneaker Shop</title>
   <link rel="stylesheet" href="caracteristicas.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
   <header>
@@ -17,7 +18,6 @@
         <script>
           function buscarProducto() {
             const query = document.getElementById('buscar').value.toLowerCase();
-        
             if (query.includes("hombre")) {
               window.location.href = "hombre.html";
             } else if (query.includes("mujer")) {
@@ -31,13 +31,10 @@
             } else {
               alert("No se encontraron resultados para: " + query);
             }
-        
             return false; // Evita que el formulario se recargue
           }
         </script>
-        
-
-        <a href="login.html" class="login">INICIAR SESIÓN</a> 
+        <a href="login.html" class="login">INICIAR SESIÓN</a>
         <a href="registro.html" class="register">REGISTRARSE</a>
         <span class="icons">  </span>
       </div>
@@ -50,10 +47,10 @@
       <li><a href="unisex.html">Unisex</a></li>
       <li><a href="novedades.html">Lo más nuevo</a></li>
     </ul>
-    
+  </header>
 
   <main>
-    <section class="banner">
+    <section class="banner" data-aos="fade-down">
       <div class="banner-container">
         <img src="banner.jpg" alt="Sneakers Nueva Colección" />
         <div class="banner-overlay">
@@ -62,55 +59,53 @@
         </div>
       </div>
     </section>
-    
 
     <section class="content">
-      <div class="coleccion-box">
+      <div class="coleccion-box" data-aos="fade-up">
         <h2>¡Descubre nuestra Nueva Colección!</h2>
       </div>
-      <p>
+      <p data-aos="fade-right">
         La temporada ha llegado con lo último en innovación y estilo para jugadores de todos los niveles.
         En nuestra Nueva Colección, encontrarás una selección exclusiva de raquetas, ropa deportiva, calzado
         y accesorios de tenis, diseñados para ofrecerte lo mejor en rendimiento y confort.
       </p>
-      <p>
+      <p data-aos="fade-left">
         Cada producto ha sido elegido cuidadosamente para mantenerte a la vanguardia del tenis,
         combinando lo último en tecnología con diseños modernos y atractivos. Ya sea que busques mejorar
         tu juego con raquetas de alto rendimiento o estar a la moda con nuestras nuevas líneas de ropa,
         tenemos todo lo que necesitas para brillar en la cancha.
       </p>
-      <p class="highlight">
+      <p class="highlight" data-aos="zoom-in">
         Renueva tu equipo, renueva tu juego. ¡Hazte con lo más nuevo y empieza esta temporada con el pie derecho!
       </p>
     </section>
 
     <section class="products">
-      <div class="product-card">
-        <img src="tennis1.jpg" alt="Hombre LIFESTYLE" />
-        <p class="price">$1500</p>
+      <div class="product-card" data-aos="flip-left">
+        <img src="TUUP1.png" alt="Zapatillas Turnaround" />
+        <p class="price">$1449</p>
         <p>Hombre LIFESTYLE</p>
-        <a href="tennis1.html" class="tennis1">Descripcion</a> 
-
+        <a href="tennis1.html" class="tennis1">Descripción</a>
       </div>
-      <div class="product-card">
-        <img src="tennis2.jpg" alt="Mujeres RUNNING" />
+      <div class="product-card" data-aos="flip-up">
+        <img src="TUUP2.png" alt="Mujeres RUNNING" />
         <p class="price">$1200</p>
         <p>Mujeres RUNNING</p>
-        <a href="tennis2.html" class="tennis2">Descripcion</a> 
-
+        <a href="tennis2.html" class="tennis2">Descripción</a>
       </div>
-      <div class="product-card">
-        <img src="tennis3.jpg" alt="Unisex LIFESTYLE" />
+      <div class="product-card" data-aos="flip-right">
+        <img src="TUUP3.png" alt="Unisex LIFESTYLE" />
         <p class="price">$900</p>
         <p>Unisex LIFESTYLE</p>
-        <a href="tennis3.html" class="tennis3">Descripcion</a> 
-
+        <a href="tennis3.html" class="tennis3">Descripción</a>
       </div>
     </section>
   </main>
-</body>
-<p align="center">
-  <img src="Diseño.jpg" alt="Diseño" width="200"/>
-</p>
 
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
 </html>
+

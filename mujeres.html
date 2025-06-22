@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MASTA - Tenis para Mujer</title>
+    <style>
+        :root {
+            --primary-color: #000000;
+            --secondary-color: #767677;
+            --accent-color: #00a650;
+            --background-color: #f8f8f8;
+            --card-bg: #ffffff;
+            --border-color: #e5e5e0;
+            --pink-accent: #ff66b2;
+            --text-light: #ffffff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+        
+        body {
+            background-color: var(--background-color);
+            color: var(--primary-color);
+            line-height: 1.6;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            padding: 15px 0;
+            position: relative;
+        }
+        
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--text-light);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+        
+        nav ul li a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 14px;
+            text-transform: uppercase;
+            transition: opacity 0.3s;
+        }
+        
+        nav ul li a:hover {
+            opacity: 0.8;
+        }
+        
+        .header-banner {
+            position: relative;
+            height: 180px;
+            overflow: hidden;
+        }
+        
+        .header-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.8;
+        }
+        
+        .header-title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 100%;
+        }
+        
+        .header-title h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .header-title p {
+            font-size: 18px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        /* Search Bar */
+        .search-container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        
+        .search-bar {
+            display: flex;
+            width: 100%;
+        }
+        
+        .search-bar input {
+            flex: 1;
+            padding: 12px 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px 0 0 4px;
+            font-size: 14px;
+        }
+        
+        .search-bar button {
+            padding: 0 25px;
+            background-color: var(--pink-accent);
+            color: var(--text-light);
+            border: none;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .search-bar button:hover {
+            background-color: #e0559d;
+        }
+        
+        /* Promo Banner */
+        .promo-banner {
+            background-color: var(--pink-accent);
+            color: var(--text-light);
+            text-align: center;
+            padding: 12px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        /* Shipping Banner */
+        .shipping-banner {
+            background-color: var(--text-light);
+            padding: 15px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .shipping-items {
+            display: flex;
+            justify-content: space-around;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .shipping-item {
+            font-size: 14px;
+            color: var(--secondary-color);
+        }
+        
+        /* Product Grid */
+        .product-section {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        
+        .product-card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+        }
+        
+        .product-image-container {
+            position: relative;
+            height: 220px;
+            overflow: hidden;
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .product-card:hover .product-image {
+            transform: scale(1.05);
+        }
+        
+        .new-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: var(--pink-accent);
+            color: var(--text-light);
+            padding: 5px 10px;
+            font-size: 12px;
+            font-weight: bold;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+        
+        .product-info {
+            padding: 18px;
+        }
+        
+        .product-price {
+            font-size: 18px;
+            font-weight: bold;
+            color: var(--pink-accent);
+            margin-bottom: 8px;
+        }
+        
+        .product-name {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+        
+        .product-category {
+            font-size: 14px;
+            color: var(--secondary-color);
+            margin-bottom: 8px;
+        }
+        
+        .free-shipping {
+            color: var(--accent-color);
+            font-size: 12px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .copyright {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-top {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            nav ul {
+                gap: 15px;
+            }
+            
+            .header-title h1 {
+                font-size: 24px;
+            }
+            
+            .header-title p {
+                font-size: 16px;
+            }
+            
+            .shipping-items {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+            
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <div class="header-top">
+                <div class="logo">SNEAKER SHOP</div>
+                <nav>
+                    <ul>
+                        <li><a href="Pagina.html">INICIO</a></li>
+                        <li><a href="hombre.html">HOMBRE</a></li>
+                        <li><a href="mujeres.html">MUJER</a></li>
+                        <li><a href="niños.html">NIÑOS</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <div class="header-banner">
+                 <div class="header-title">
+                    <h1>SNEAKER SHOP</h1>
+                    <p>Tenis para Mujer</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Search Section -->
+    <div class="search-container">
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar tenis para mujer...">
+            <button>Buscar</button>
+        </div>
+    </div>
+    
+    <!-- Promo Banner -->
+    <div class="promo-banner">
+        ENVÍO GRATIS EN COMPRAS MAYORES A $1,000 MXN
+    </div>
+    
+    <!-- Shipping Info -->
+    <div class="shipping-banner">
+        <div class="shipping-items">
+            <div class="shipping-item">Devoluciones gratis</div>
+            <div class="shipping-item">3 meses sin intereses</div>
+            <div class="shipping-item">Garantía de 6 meses</div>
+        </div>
+    </div>
+    
+    <!-- Product Grid -->
+    <div class="product-section">
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="mj1.jpg" alt="Tenis Charly Kraken PFX Lila" class="product-image">
+                    <div class="new-badge">Nuevo</div>
+                </div>
+                <div class="product-info">
+                    <div class="product-price">$1,199.00 MXN</div>
+                    <div class="product-name">Tenis Charly Kraken PFX</div>
+                    <div class="product-category">Running Road color Lila para mujer</div>
+                    <div class="free-shipping">Envío gratis</div>
+                </div>
+            </div>
+            
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="mj2.jpg" alt="Tenis Charly Kraken PFX Negro" class="product-image">
+                </div>
+                <div class="product-info">
+                    <div class="product-price">$1,199.00 MXN</div>
+                    <div class="product-name">Tenis Charly Kraken PFX</div>
+                    <div class="product-category">Running Road color Negro para mujer</div>
+                    <div class="free-shipping">Envío gratis</div>
+                </div>
+            </div>
+            
+            <!-- Product 3 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="mj3.jpg" alt="Tenis Charly Flyon Running Coral" class="product-image">
+                </div>
+                <div class="product-info">
+                    <div class="product-price">$899.00 MXN</div>
+                    <div class="product-name">Tenis Charly Flyon Running</div>
+                    <div class="product-category">Road Casual color Coral para mujer</div>
+                    <div class="free-shipping">Envío gratis</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p class="copyright">© 2023 Sneaker Shop. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

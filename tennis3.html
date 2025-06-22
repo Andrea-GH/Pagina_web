@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Balance 997 - Detalles</title>
+  <style>
+    :root {
+      --primary-color: #000000;
+      --secondary-color: #333333;
+      --accent-color: #0066cc;
+      --background-color: #f5f5f5;
+      --text-color: #333333;
+      --white: #ffffff;
+      --price-color: #d32f2f;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+    }
+    
+    body {
+      background-color: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      padding: 20px;
+    }
+    
+    .product-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      background-color: var(--white);
+      padding: 30px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+    
+    .product-images {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .main-image {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+    
+    .thumbnail-container {
+      display: flex;
+      gap: 10px;
+    }
+    
+    .thumbnail {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 4px;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: all 0.3s ease;
+    }
+    
+    .thumbnail:hover {
+      border-color: var(--accent-color);
+    }
+    
+    .product-info {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    .product-title {
+      font-size: 28px;
+      font-weight: bold;
+      color: var(--primary-color);
+      margin-bottom: 10px;
+      line-height: 1.2;
+    }
+    
+    .price-container {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      margin-bottom: 15px;
+    }
+    
+    .current-price {
+      font-size: 24px;
+      font-weight: bold;
+      color: var(--price-color);
+    }
+    
+    .original-price {
+      font-size: 18px;
+      color: var(--secondary-color);
+      text-decoration: line-through;
+    }
+    
+    .product-description {
+      margin-bottom: 20px;
+      line-height: 1.7;
+    }
+    
+    .divider {
+      height: 1px;
+      background-color: #e0e0e0;
+      margin: 20px 0;
+    }
+    
+    .case-info {
+      font-size: 16px;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+    
+    .size-section h3 {
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+    
+    .size-table {
+      width: 100%;
+      margin-bottom: 20px;
+      border-collapse: collapse;
+    }
+    
+    .size-table td {
+      padding: 12px;
+      text-align: center;
+      border: 1px solid #e0e0e0;
+      font-weight: bold;
+    }
+    
+    .size-table td.highlight {
+      background-color: #f5f5f5;
+    }
+    
+    .size-note {
+      font-size: 14px;
+      color: var(--secondary-color);
+      margin-bottom: 25px;
+      font-style: italic;
+    }
+    
+    .add-to-cart {
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      text-transform: uppercase;
+      width: 100%;
+      max-width: 300px;
+      margin-top: 20px;
+    }
+    
+    .add-to-cart:hover {
+      background-color: var(--secondary-color);
+    }
+    
+    .back-link {
+      display: inline-block;
+      margin-top: 30px;
+      color: var(--accent-color);
+      text-decoration: none;
+      font-weight: bold;
+    }
+    
+    .back-link:hover {
+      text-decoration: underline;
+    }
+    
+    @media (max-width: 768px) {
+      .product-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="product-container">
+    <div class="product-images">
+      <img src="TUUP3.png" alt="New Balance 997 - Vista frontal" class="main-image">
+      <div class="thumbnail-container">
+        <img src="TUUP3.png" alt="Vista frontal" class="thumbnail">
+        <img src="TUUP3-.png" alt="Vista lateral" class="thumbnail">
+      </div>
+    </div>
+    
+    <div class="product-info">
+      <h1 class="product-title">Made in USA 997</h1>
+      
+      <div class="price-container">
+        <span class="current-price">$4,399.20</span>
+        <span class="original-price">$6,499.00</span>
+      </div>
+      
+      <div class="divider"></div>
+      
+      <div class="case-info">Case: 0%</div>
+      
+      <div class="divider"></div>
+      
+      <div class="size-section">
+        <h3>Seleccione Talla</h3>
+        <table class="size-table">
+          <tr>
+            <td>22.5</td>
+            <td>23.5</td>
+            <td class="highlight">25</td>
+            <td>25.5</td>
+            <td class="highlight">26</td>
+            <td class="highlight">26.5</td>
+            <td class="highlight">27</td>
+          </tr>
+          <tr>
+            <td class="highlight">27.5</td>
+            <td>28.5</td>
+            <td class="highlight">28.5</td>
+            <td>29.5</td>
+            <td>30.5</td>
+            <td>30.5</td>
+            <td>30.5</td>
+          </tr>
+        </table>
+        
+        <p class="size-note">Mujeres: Te recomendamos pedir 0.5 menos de la talla habitual.</p>
+        <p class="size-note">Ajuste normal.</p>
+      </div>
+      
+      <div class="divider"></div>
+      
+      <p class="product-description">
+        Con una combinación irresistible de estética y comodidad, la renovada colección de 997 de New Balance lleva el estilo urbano al siguiente nivel con una amplia gama de estilos que combinan durabilidad y rendimiento con una asombrosa capacidad para funcionar con todos los estilos que faltan en su armario. El catálogo New Balance MADE USA confiere un valor nacional de 70% más. MADE contribuye una parte limitada de las ventas de New Balance en los Estados Unidos, ¡cómpralos ya!
+      </p>
+      
+      <p style="font-style: italic; margin-bottom: 20px;">Seleccione los atributos para revisar disponibilidad</p>
+      
+      <button class="add-to-cart">COMPRAR AHORA</button>
+      <a href="Pagina.html" class="back-link">← Volver al inicio</a>
+    </div>
+  </div>
+</body>
+</html>

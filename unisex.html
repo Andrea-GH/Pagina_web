@@ -11,7 +11,10 @@
       --price-color: #000;
       --free-shipping-color: #00a650;
       --border-color: #e5e5e5;
-      --background-color: #e8f5e9; /* Gris verdoso claro */
+      --background-color: #e8f5e9;
+      --header-bg: #000;
+      --footer-bg: #000;
+      --text-light: #fff;
     }
     
     body {
@@ -22,6 +25,74 @@
       color: var(--primary-color);
     }
 
+    /* Header Styles */
+    header {
+      background-color: var(--header-bg);
+      color: var(--text-light);
+      padding: 15px 0;
+      text-align: center;
+      position: relative;
+    }
+
+    .header-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: var(--text-light);
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      color: var(--text-light);
+      text-decoration: none;
+      font-size: 14px;
+      text-transform: uppercase;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ccc;
+    }
+
+    .header-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .header-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: var(--text-light);
+      font-size: 28px;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+      width: 100%;
+      text-align: center;
+    }
+
+    /* Main Content Styles */
     .back-button {
       display: block;
       margin: 20px auto;
@@ -51,6 +122,11 @@
       padding: 40px 20px;
       max-width: 1200px;
       margin: 0 auto;
+    }
+
+    .producto-link {
+      text-decoration: none;
+      color: inherit;
     }
 
     .producto {
@@ -183,6 +259,45 @@
       margin: 8px 0 0;
     }
 
+    /* Footer Styles */
+    footer {
+      background-color: var(--footer-bg);
+      color: var(--text-light);
+      text-align: center;
+      padding: 30px 0;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 20px;
+    }
+
+    .footer-links a {
+      color: var(--text-light);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: #ccc;
+    }
+
+    .copyright {
+      margin-top: 20px;
+      color: #aaa;
+      font-size: 12px;
+    }
+
     /* Responsive */
     @media (max-width: 768px) {
       .content {
@@ -203,115 +318,172 @@
         width: 40px;
         height: 40px;
       }
+
+      .header-text {
+        font-size: 22px;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav ul li {
+        margin-left: 0;
+      }
+
+      .footer-links {
+        flex-direction: column;
+        gap: 15px;
+      }
     }
   </style>
 </head>
 <body>
 
+  <!-- Header Section -->
+  <header>
+    <div class="header-content">
+      <div class="logo">SNEAKER SHOP</div>
+      <nav>
+                    <ul>
+                        <li><a href="Pagina.html">INICIO</a></li>
+                        <li><a href="hombre.html">HOMBRE</a></li>
+                        <li><a href="mujeres.html">MUJER</a></li>
+                        <li><a href="niños.html">NIÑOS</a></li>
+                    </ul>
+      </nav>
+    </div>
+    <div style="position: relative;">
+       <div class="header-text">COLECCIÓN UNISEX</div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
   <a href="Pagina.html" class="back-button">← Regresar</a>
 
   <div class="content">
     <!-- Producto 1 -->
-    <div class="producto">
-      <div class="img-container">
-        <img src="TUNP1.png" alt="Tenis Break Start" class="producto-img" id="main-img-1">
-        <div class="badge-new">Nuevo</div>
+    <a href="detalle_producto1.html" class="producto-link" target="_blank">
+      <div class="producto">
+        <div class="img-container">
+          <img src="TUNP1.png" alt="Tenis Break Start" class="producto-img" id="main-img-1">
+          <div class="badge-new">Nuevo</div>
+        </div>
+        <div class="thumbnail-container">
+          <img src="TUNP1.png" alt="Color 1" class="thumbnail" onmouseover="document.getElementById('main-img-1').src='TUNP1.png'">
+          <img src="TUNP2.png" alt="Color 2" class="thumbnail" onmouseover="document.getElementById('main-img-1').src='TUNP2.png'">
+        </div>
+        <div class="producto-content">
+          <div class="producto-price">$1,249</div>
+          <h3 class="producto-title">Tenis Break Start</h3>
+          <p class="producto-category">Sportwear</p>
+          <p class="producto-colors">2 colores</p>
+          <p class="free-shipping">Envío gratis</p>
+        </div>
       </div>
-      <div class="thumbnail-container">
-        <img src="TUNP1.png" alt="Color 1" class="thumbnail" onmouseover="document.getElementById('main-img-1').src='TUNP1.png'">
-        <img src="TUNP2.png" alt="Color 2" class="thumbnail" onmouseover="document.getElementById('main-img-1').src='TUNP2.png'">
-      </div>
-      <div class="producto-content">
-        <div class="producto-price">$1,249</div>
-        <h3 class="producto-title">Tenis Break Start</h3>
-        <p class="producto-category">Sportwear</p>
-        <p class="producto-colors">2 colores</p>
-        <p class="free-shipping">Envío gratis</p>
-      </div>
-    </div>
+    </a>
 
     <!-- Producto 2 -->
-    <div class="producto">
-      <div class="img-container">
-        <img src="TUNP3.png" alt="Tenis Ultimashow 2.0" class="producto-img" id="main-img-2">
-        <div class="badge-new">Nuevo</div>
+    <a href="detalle_producto2.html" class="producto-link" target="_blank">
+      <div class="producto">
+        <div class="img-container">
+          <img src="TUNP3.png" alt="Tenis Ultimashow 2.0" class="producto-img" id="main-img-2">
+          <div class="badge-new">Nuevo</div>
+        </div>
+        <div class="thumbnail-container">
+          <img src="TUNP3.png" alt="Color 1" class="thumbnail" onmouseover="document.getElementById('main-img-2').src='TUNP3.png'">
+          <img src="TUNP4.png" alt="Color 2" class="thumbnail" onmouseover="document.getElementById('main-img-2').src='TUNP4.png'">
+        </div>
+        <div class="producto-content">
+          <div class="producto-price">$1,249</div>
+          <h3 class="producto-title">Tenis Ultimashow 2.0 Mercedes</h3>
+          <p class="producto-category">Deportes</p>
+          <p class="producto-colors">2 colores</p>
+          <p class="free-shipping">Envío gratis</p>
+        </div>
       </div>
-      <div class="thumbnail-container">
-        <img src="TUNP3.png" alt="Color 1" class="thumbnail" onmouseover="document.getElementById('main-img-2').src='TUNP3.png'">
-        <img src="TUNP4.png" alt="Color 2" class="thumbnail" onmouseover="document.getElementById('main-img-2').src='TUNP4.png'">
-      </div>
-      <div class="producto-content">
-        <div class="producto-price">$1,249</div>
-        <h3 class="producto-title">Tenis Ultimashow 2.0 Mercedes</h3>
-        <p class="producto-category">Deportes</p>
-        <p class="producto-colors">2 colores</p>
-        <p class="free-shipping">Envío gratis</p>
-      </div>
-    </div>
+    </a>
 
     <!-- Producto 3 -->
-    <div class="producto">
-      <div class="img-container">
-        <img src="TUNP5.png" alt="UA Phantom 4 Luxe" class="producto-img" id="main-img-3">
+    <a href="detalle_producto3.html" class="producto-link" target="_blank">
+      <div class="producto">
+        <div class="img-container">
+          <img src="TUNP5.png" alt="UA Phantom 4 Luxe" class="producto-img" id="main-img-3">
+        </div>
+        <div class="thumbnail-container">
+          <img src="TUNP5.png" alt="Color 1" class="thumbnail" onmouseover="document.getElementById('main-img-3').src='TUNP5.png'">
+          <img src="TUNP6.png" alt="Color 2" class="thumbnail" onmouseover="document.getElementById('main-img-3').src='TUNP6.png'">
+        </div>
+        <div class="producto-content">
+          <div class="producto-price">$2,399</div>
+          <h3 class="producto-title">UA Phantom 4 Luxe</h3>
+          <p class="producto-category">Originals</p>
+          <p class="producto-colors">2 colores</p>
+          <p class="free-shipping">Envío gratis</p>
+        </div>
       </div>
-      <div class="thumbnail-container">
-        <img src="TUNP5.png" alt="Color 1" class="thumbnail" onmouseover="document.getElementById('main-img-3').src='TUNP5.png'">
-        <img src="TUNP6.png" alt="Color 2" class="thumbnail" onmouseover="document.getElementById('main-img-3').src='TUNP6.png'">
-      </div>
-      <div class="producto-content">
-        <div class="producto-price">$2,399</div>
-        <h3 class="producto-title">UA Phantom 4 Luxe</h3>
-        <p class="producto-category">Originals</p>
-        <p class="producto-colors">2 colores</p>
-        <p class="free-shipping">Envío gratis</p>
-      </div>
-    </div>
+    </a>
 
     <!-- Producto 4 -->
-    <div class="producto">
-      <div class="img-container">
-        <img src="TUNP7.png" alt="UA Apparition" class="producto-img" id="main-img-4">
+    <a href="detalle_producto4.html" class="producto-link" target="_blank">
+      <div class="producto">
+        <div class="img-container">
+          <img src="TUNP7.png" alt="UA Apparition" class="producto-img" id="main-img-4">
+        </div>
+        <div class="thumbnail-container">
+          <img src="TUNP7.png" alt="Color 1" class="thumbnail" onmouseover="document.getElementById('main-img-4').src='TUNP7.png'">
+          <img src="TUNP8.png" alt="Color 2" class="thumbnail" onmouseover="document.getElementById('main-img-4').src='TUNP8.png'">
+        </div>
+        <div class="producto-content">
+          <div class="producto-price">$2,159</div>
+          <h3 class="producto-title">UA Apparition</h3>
+          <p class="producto-category">Tenis unisex</p>
+          <p class="producto-colors">2 colores</p>
+          <p class="free-shipping">Envío gratis</p>
+        </div>
       </div>
-      <div class="thumbnail-container">
-        <img src="TUNP7.png" alt="Color 1" class="thumbnail" onmouseover="document.getElementById('main-img-4').src='TUNP7.png'">
-        <img src="TUNP8.png" alt="Color 2" class="thumbnail" onmouseover="document.getElementById('main-img-4').src='TUNP8.png'">
-      </div>
-      <div class="producto-content">
-        <div class="producto-price">$2,159</div>
-        <h3 class="producto-title">UA Apparition</h3>
-        <p class="producto-category">Tenis unisex</p>
-        <p class="producto-colors">2 colores</p>
-        <p class="free-shipping">Envío gratis</p>
-      </div>
-    </div>
+    </a>
 
     <!-- Producto 5 -->
-    <div class="producto">
-      <div class="img-container">
-        <img src="TUNP9.png" alt="2002RX gore-Tex" class="producto-img" id="main-img-5">
-      </div>
-      <div class="producto-content">
-        <div class="producto-price">$4,099</div>
-        <h3 class="producto-title">2002RX gore-Tex x JJJJound</h3>
-        <p class="producto-category">Unisex Lifestyle</p>
-        <p class="free-shipping">Envío gratis</p>
-      </div>
-    </div>
+    <!--<a href="detalle_producto5.html" class="producto-link" target="_blank">-->
+      <!--<div class="producto">-->
+    <!--    <div class="img-container">-->
+        <!--  <img src="TUNP9.png" alt="2002RX gore-Tex" class="producto-img" id="main-img-5">-->
+     <!--   </div>-->
+     <!--   <div class="producto-content">-->
+     <!--     <div class="producto-price">$4,099</div>-->
+     <!--     <h3 class="producto-title">2002RX gore-Tex x JJJJound</h3>-->
+     <!--     <p class="producto-category">Unisex Lifestyle</p>-->
+     <!--     <p class="free-shipping">Envío gratis</p>-->
+     <!--   </div>-->
+     <!-- </div>-->
+   <!-- </a>-->
 
     <!-- Producto 6 -->
-    <div class="producto">
-      <div class="img-container">
-        <img src="TUNP10.png" alt="574" class="producto-img" id="main-img-6">
-      </div>
-      <div class="producto-content">
-        <div class="producto-price">$2,299</div>
-        <h3 class="producto-title">574</h3>
-        <p class="producto-category">Unisex Lifestyle</p>
-        <p class="free-shipping">Envío gratis</p>
-      </div>
-    </div>
+   <!-- <a href="detalle_producto6.html" class="producto-link" target="_blank">-->
+   <!--   <div class="producto">-->
+  <!--      <div class="img-container">-->
+      <!--    <img src="TUNP10.png" alt="574" class="producto-img" id="main-img-6">-->
+    <!--    </div>-->
+   <!--       <div class="producto-content">-->
+    <!--        <div class="producto-price">$2,299</div>-->
+    <!--        <h3 class="producto-title">574</h3>-->
+    <!--        <p class="producto-category">Unisex Lifestyle</p>-->
+   <!--         <p class="free-shipping">Envío gratis</p>-->
+   <!--       </div>-->
+   <!--     </div>-->
+   <!--   </a>-->
   </div>
 
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-content">
+
+      <div class="copyright">
+        © 2023 Sneaker Shop. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
-

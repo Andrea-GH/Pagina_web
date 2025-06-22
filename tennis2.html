@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tenis Skate Clásicos - Detalles</title>
+  <style>
+    :root {
+      --primary-color: #000000;
+      --secondary-color: #333333;
+      --accent-color: #0066cc;
+      --background-color: #f5f5f5;
+      --text-color: #333333;
+      --white: #ffffff;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+    }
+    
+    body {
+      background-color: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      padding: 20px;
+    }
+    
+    .product-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      background-color: var(--white);
+      padding: 30px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+    
+    .product-images {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .main-image {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+    
+    .thumbnail-container {
+      display: flex;
+      gap: 10px;
+    }
+    
+    .thumbnail {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 4px;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: all 0.3s ease;
+    }
+    
+    .thumbnail:hover {
+      border-color: var(--accent-color);
+    }
+    
+    .product-info {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    .product-title {
+      font-size: 28px;
+      font-weight: bold;
+      color: var(--primary-color);
+      margin-bottom: 10px;
+      line-height: 1.2;
+    }
+    
+    .product-subtitle {
+      font-size: 18px;
+      color: var(--secondary-color);
+      margin-bottom: 20px;
+    }
+    
+    .product-description {
+      margin-bottom: 20px;
+      line-height: 1.7;
+    }
+    
+    .divider {
+      height: 1px;
+      background-color: #e0e0e0;
+      margin: 20px 0;
+    }
+    
+    .specs-section h3, .size-section h3 {
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+    
+    .specs-list {
+      list-style-type: none;
+      margin-bottom: 20px;
+    }
+    
+    .specs-list li {
+      padding: 8px 0;
+      border-bottom: 1px solid #f0f0f0;
+      display: flex;
+    }
+    
+    .specs-list li:last-child {
+      border-bottom: none;
+    }
+    
+    .size-tables {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      margin-bottom: 20px;
+    }
+    
+    .size-table {
+      width: 100%;
+    }
+    
+    .size-table caption {
+      text-align: left;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    
+    .size-table td {
+      padding: 8px 12px;
+      text-align: center;
+      border: 1px solid #e0e0e0;
+    }
+    
+    .size-note {
+      font-size: 14px;
+      color: var(--secondary-color);
+      margin-bottom: 25px;
+    }
+    
+    .add-to-cart {
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      text-transform: uppercase;
+      width: 100%;
+      max-width: 300px;
+    }
+    
+    .add-to-cart:hover {
+      background-color: var(--secondary-color);
+    }
+    
+    .back-link {
+      display: inline-block;
+      margin-top: 30px;
+      color: var(--accent-color);
+      text-decoration: none;
+      font-weight: bold;
+    }
+    
+    .back-link:hover {
+      text-decoration: underline;
+    }
+    
+    @media (max-width: 768px) {
+      .product-container {
+        grid-template-columns: 1fr;
+      }
+      
+      .size-tables {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="product-container">
+    <div class="product-images">
+      <img src="TUUP2.png" alt="Tenis Skate Clásicos - Vista frontal" class="main-image">
+      <div class="thumbnail-container">
+        <img src="TUUP2.png" alt="Vista frontal" class="thumbnail">
+        <img src="TUUP2-.png" alt="Vista lateral" class="thumbnail">
+        <img src="TUUP2-.png" alt="Vista trasera" class="thumbnail">
+      </div>
+    </div>
+    
+    <div class="product-info">
+      <h1 class="product-title">INSPIRACIÓN SKATE DE LA VIEJA ESCUELA CON EXAGERADAS 3 FRANJAS EN LOS LATERALES</h1>
+      <p class="product-subtitle">Tenis Urbanos Clásicos</p>
+      <p class="product-description">
+          <li>Parte superior UA IntelliKnit ligera y cómoda con elasticidad, sujeción y transpirabilidad estratégicas donde más las necesitas</li>
+          <li>Envoltura de TPU lateral para una mayor estabilidad y sujeción lateral</li>
+          <li>Zona del tobillo mullida en el talón para una mayor comodidad y un ajuste firme</li>
+          <li>Enfranque interno para una mayor sujeción en la planta del pie durante los movimientos explosivos</li>
+          <li>La entresuela Flow de una pieza proporciona una amortiguación eficaz y duradera</li>
+          <li>La tecnología Flow elimina la suela de goma, lo que crea una pisada más ligera y fluida en cualquier superficie</li>
+          <li>El material de la suela es sumamente duradero y aumenta la tracción en el suelo</li>
+
+      </p>
+      
+      <p><strong>Precio:</strong> $1,500 MXN</p>
+      <p><strong>Colores disponibles:</strong> Blanco con franjas negras, Negro con franjas blancas</p>
+      
+      <div class="divider"></div>
+
+      <div class="size-section">
+        <h3>Tallas</h3>
+        <div class="size-tables">
+          <table class="size-table">
+            <tr>
+              <td>MX-23</td>
+              <td>MX-23.5</td>
+              <td>MX-24</td>
+              <td>MX-24.5</td>
+            </tr>
+            <tr>
+              <td>MX-26</td>
+              <td>MX-2.5</td>
+              <td>MX-27</td>
+              <td>MX-27.5</td>
+            </tr>
+          </table>
+        </div>
+        
+        <p class="size-note">Talla real. Te recomendamos pedir tu talla habitual.</p>
+      </div>
+      
+      <button class="add-to-cart">AÑADIR AL CARRITO</button>
+      <a href="Pagina.html" class="back-link">← Volver al inicio</a>
+    </div>
+  </div>
+</body>
+</html>
